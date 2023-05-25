@@ -4,6 +4,7 @@
 		<title>WordPress Playground</title>
 	</head>
 	<body>
+    <button onclick="showDirectoryPicker()">Pick a directory</button><br>
 		<iframe id="wp" style="width: 1200px; height: 800px"></iframe>
 		<script type="module">
 			import { startPlaygroundWeb } from 'https://unpkg.com/@wp-playground/client/index.js';
@@ -33,8 +34,6 @@
 					],
 				},
 			});
-			
-			showDirectoryPicker()
 
 			const response = await client.run({
 				code: '<?php echo "Hi!"; ',
